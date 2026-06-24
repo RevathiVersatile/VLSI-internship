@@ -1,0 +1,9 @@
+module mux2X1(a,b,s,y);
+  input a,b,s;
+  output y;
+  wire w1,w2,w3;
+  assign w1=~s;
+  assign w2=a&w1;
+  assign w3=b&s;
+  assign y=w2|w3;
+endmodule
